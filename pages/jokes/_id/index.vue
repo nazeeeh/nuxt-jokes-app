@@ -1,14 +1,15 @@
 <template>
-    <div>
-        <nuxt-link to="/jokes"> Back to jokes
-        </nuxt-link>
-        <h4>{{joke}}</h4>
-        <hr />
-        <small>Joke:ID {{$route.params.id}}</small>
-    </div>
+  <div>
+    <nuxt-link to="/jokes"> Back to jokes
+    </nuxt-link>
+      <h4>{{ joke }}</h4>
+      <hr />
+      <small>Joke:ID {{ $route.params.id }}</small>
+  </div>
 </template>
 
 <script>
+
 import axios from 'axios'
 
 export default {
@@ -17,6 +18,20 @@ export default {
       joke: {}
     }
   },
+
+  head () {
+    return {
+      title: this.joke,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'A place for excellent jokes'
+        }
+      ]
+    }
+  },
+
   async created () {
     const config = {
       headers: {
