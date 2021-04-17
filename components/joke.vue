@@ -1,7 +1,9 @@
 <template>
-    <div class="joke">
+    <nuxt-link :to="'jokes/' + id">
+        <div class="joke">
         {{joke}}
     </div>
+    </nuxt-link>
 </template>
 
 <script>
