@@ -20,3 +20,6 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 https://nazeeeh.github.io/nuxt-jokes-app/
+
+LINK to jokesapp
+https://nuxt-joke-app.netlify.app/jokes
